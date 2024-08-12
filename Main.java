@@ -3,29 +3,34 @@ import java.util.Scanner;
 
 public class Main {
 
-	public static void main(String[] args) 
-	{
+	public static void main(String[] args) {
+		
 		Locale.setDefault(Locale.US);
-		Scanner sc = new Scanner(System.in); 
+		Scanner sc = new Scanner(System.in);
 		
-		double A, B, C, triangulo, circulo, trapezio, quadrado, retangulo;
+        double salario = sc.nextDouble();
 		
-		A = sc.nextDouble();
-		B = sc.nextDouble();
-		C = sc.nextDouble();
+		double imposto;
+		if (salario <= 2000.0) {
+			imposto = 0.0;
+		}
+		else if (salario <= 3000.0) {
+			imposto = (salario - 2000.0) * 0.08;
+		}
+		else if (salario <= 4500.0) {
+			imposto = (salario - 3000.0) * 0.18 + 1000.0 * 0.08;
+		}
+		else {
+			imposto = (salario - 4500.0) * 0.28 + 1500.0 * 0.18 + 1000.0 * 0.08;
+		}
+
+		if (imposto == 0.0) {
+			System.out.println("Isento");
+		}
+		else {
+			System.out.printf("R$ %.2f%n", imposto);
+		}
 		
-		triangulo = A * C / 2.0;
-		circulo = 3.14159 * C * C;
-		trapezio = (A + B)/ 2.0 * C;
-		quadrado = B * B;
-		retangulo = A * B;
-		
-		
-		System.out.printf("TRIANGULO = %.3f%n", triangulo);
-		System.out.printf("CIRCULO = %.3f%n", circulo);
-		System.out.printf("TRAPEZIO = %.3f%n", trapezio);
-		System.out.printf("QUADRADO = %.3f%n", quadrado);
-		System.out.printf("RETANGULO = %.3f%n", retangulo);
 		
 		sc.close();
 	}
