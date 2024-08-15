@@ -1,26 +1,34 @@
 package exercicioswhile;
-
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
 
-
 	public static void main(String[] args) {
 		
-		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		int x = sc.nextInt();
-		while(x != 2002)
+		int alcool = 0;
+		int gasolina = 0;
+		int diesel = 0;
+		int tipo = sc.nextInt();
+		
+		while (tipo != 4)
 		{
-			System.out.println("Senha Inválida");
-			x = sc.nextInt();
-			
+			if(tipo == 1) {
+				alcool += 1;
+			}
+			else if(tipo == 2) {
+				gasolina += 1;
+			}
+			else if (tipo == 3) {
+				diesel += 1;
+			}
+			tipo = sc.nextInt();
 		}
-			System.out.println("Acesso permitido");
-		
-		
+		System.out.println("MUITO OBRIGADA");
+		System.out.println("alcool: "+ alcool);
+		System.out.println("gasolina: "+ gasolina);
+		System.out.println("diesel: "+ diesel); 
 		
 		sc.close();
 	}
