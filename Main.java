@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
+		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
@@ -16,10 +17,17 @@ public class Main {
 			{
 				double v1 = sc.nextDouble();
 				double v2 = sc.nextDouble();
-				double v3 = sc.nextDouble();
-				double media = (v1 * 2.0 + v2 * 3.0 + v3 * 5.0) / 10.0;
 				
-				System.out.printf("%.1f%n", media);
+				if (v2 == 0)
+				{
+					System.out.println("divisao impossivel");
+				}
+				else 
+				{
+					double div = (double) v1 / v2;
+					System.out.printf("%.1f%n", div);
+				}
+				
 			}
 			
 		sc.close();
