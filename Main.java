@@ -1,35 +1,27 @@
-package exercicioswhile;
+package exerciciosfor;
+
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
-		
+		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		int alcool = 0;
-		int gasolina = 0;
-		int diesel = 0;
-		int tipo = sc.nextInt();
 		
-		while (tipo != 4)
-		{
-			if(tipo == 1) {
-				alcool += 1;
+			int N = sc.nextInt();
+			
+			for(int i = 0; i<N; i++)
+			{
+				double v1 = sc.nextDouble();
+				double v2 = sc.nextDouble();
+				double v3 = sc.nextDouble();
+				double media = (v1 * 2.0 + v2 * 3.0 + v3 * 5.0) / 10.0;
+				
+				System.out.printf("%.1f%n", media);
 			}
-			else if(tipo == 2) {
-				gasolina += 1;
-			}
-			else if (tipo == 3) {
-				diesel += 1;
-			}
-			tipo = sc.nextInt();
-		}
-		System.out.println("MUITO OBRIGADA");
-		System.out.println("alcool: "+ alcool);
-		System.out.println("gasolina: "+ gasolina);
-		System.out.println("diesel: "+ diesel); 
-		
+			
 		sc.close();
 	}
 
