@@ -3,32 +3,44 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
+import entities.Rent;
+
 public class Program {
 
 	public static void main(String[] args) {
-		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Quantos numeros voce vai digitar? ");
-		int n = sc.nextInt();
-		int[] vect = new int[n];
+		Rent[] vect = new Rent[10];
 		
-		for(int i = 0; i<vect.length; i++)
+		System.out.print("How many rooms will be rented? ");
+		int n = sc.nextInt();
+		
+		for(int i =1; i<=n; i++)
 		{
-			System.out.print("Digite um numero: ");
-			vect[i] = sc.nextInt();
+			System.out.println();
+			System.out.println("Rent #" + i+ ": ");
+			System.out.print("Name: ");
+			sc.nextLine();
+			String name = sc.nextLine();
+			System.out.print("Email: ");
+			String email = sc.next();
+			System.out.print("Room: ");
+			int roomNumber = sc.nextInt();
+			
+			Rent rent = new Rent(name, email);
+			vect[roomNumber]=rent;
 		}
 		
-		System.out.println("NUMEROS NEGATIVOS: ");
-		for(int i =0; i<vect.length;i++)
+		System.out.println();
+		System.out.println("Busy rooms: ");
+		for(int i =0; i<10; i++)
 		{
-			if(vect[i] < 0) {
-				System.out.println(vect[i]);
+			if(vect[i] != null) {
+				System.out.println(i + ":" + vect[i]);
 			}
 		}
-		
-		
 		sc.close();
 	}
+
 }
