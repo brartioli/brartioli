@@ -3,49 +3,32 @@ package application;
 import java.util.Locale;
 import java.util.Scanner;
 
-import entitites.Account;
-
 public class Program {
 
 	public static void main(String[] args) {
+		
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		Account account;
 		
-		System.out.print("Enter account number: ");
-		int number = sc.nextInt();
-		System.out.print("Enter account holder: "); 
-		sc.nextLine();
-		String name = sc.nextLine();
-		System.out.print("Is there na initial deposit (y/n)?");
-		char response = sc.next().charAt(0);
-		if(response == 'y') {
-			System.out.print("Enter initial deposit value: ");
-			double initialDeposit = sc.nextDouble();
-			account = new Account(number, name, initialDeposit);	
+		System.out.print("Quantos numeros voce vai digitar? ");
+		int n = sc.nextInt();
+		int[] vect = new int[n];
+		
+		for(int i = 0; i<vect.length; i++)
+		{
+			System.out.print("Digite um numero: ");
+			vect[i] = sc.nextInt();
 		}
-		else {
-			account = new Account(number, name);
+		
+		System.out.println("NUMEROS NEGATIVOS: ");
+		for(int i =0; i<vect.length;i++)
+		{
+			if(vect[i] < 0) {
+				System.out.println(vect[i]);
+			}
 		}
-		System.out.println();
-		System.out.println("Account data: ");
-		System.out.println(account);
 		
-		System.out.println();
-		System.out.printf("Enter a deposit value: ");
-		double depositValue = sc.nextDouble();
-		account.deposit(depositValue);
-		System.out.println("Updated account data: ");
-		System.out.println(account);
-		
-		System.out.println();
-		System.out.printf("Enter a withdraw value:");
-		double withDrawValue = sc.nextDouble();
-		account.withDraw(withDrawValue);
-		System.out.println("Updated account data: ");
-		System.out.println(account);
 		
 		sc.close();
 	}
-
 }
