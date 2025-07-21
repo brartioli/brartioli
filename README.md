@@ -2,7 +2,7 @@
 
 ###
 
-<p align="left">My name is Bruna Artioli and I'm a developer student, currently exploring front-end and back-end development. At the moment I'm looking to improve my knowledge, if you're interested in my journey in technology I invite you to check out my projects.</p>
+<p align="left">My name is Bruna Artioli and I'm a software developer student at 42 São Paulo, currently exploring C/C++ and Java. At the moment I'm looking to improve my knowledge, if you're interested in my journey in technology I invite you to check out my projects.</p>
 
 ###
 
@@ -10,7 +10,7 @@
 
 ###
 
-<p align="left">✨ Creating bugs since july 2024<br>📚 I'm currently learning Java FullStack <br>🎲 Fun fact: I like art and embroidery! </p>
+<p align="left">✨ Creating bugs since july 2024<br>📚 I'm currently learning Java FullStack and C/C++ <br>🎲 Fun fact: I like art and embroidery! </p>
 
 ###
 
