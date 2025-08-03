@@ -49,5 +49,6 @@
   
 </div>
 
+![Snake animation](https://github.com/https://github.com/brartioli-contribution-grid-snake.svg)
 ###
 
